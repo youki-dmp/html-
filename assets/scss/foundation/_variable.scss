@@ -1,0 +1,25 @@
+@charset "utf-8";
+//ResponsivVars
+$widthPC: 1024px;
+$widthTab: 900px;
+$widthSmp: 640px;
+
+//ColorVars
+$colorMain: #00b33a;
+$colorSub: #ff0000;
+$colorAccent: #f3f3f5;
+$colorNotice: #ff0000;
+$colorAttract: #1c1c1c;
+
+//webFont
+$webfontMincho: "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+
+//width
+$innerPC: 1000px;
+$innerMaxPC: 1400px;
+
+//Vw
+@function get_vw($size, $viewport:640){
+	$rate: 100 / $viewport;
+	@return $rate * $size * 1vw;
+}

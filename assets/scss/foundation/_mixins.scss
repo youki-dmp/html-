@@ -1,0 +1,50 @@
+// Mixin Break Point
+@mixin pc {
+  @media screen and (min-width: ($widthPC)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media screen and (max-width: ($widthTab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: ($widthSmp)) {
+    @content;
+  }
+}
+
+// Mixin Transition
+@mixin trans {
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all  0.6s ease;
+}
+
+// Mixin Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin imgset {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+// Mixin Reset margin padding
+@mixin mpreset {
+  margin: 0;
+  padding: 0;
+}
+
+// Mixin Reset All
+@mixin allreset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}

@@ -1,0 +1,59 @@
+/*
+    list.scss
+---------------------------------------------------------------------------- */
+ul {
+    margin: 0 0 3.0rem;
+    padding: 0;
+    list-style-position:none;
+    li {
+        list-style: none;
+        margin: 0 0 1.0rem;
+        padding: 0;
+    }
+    @include sp {
+    li {
+        margin: 0 0 1.16vw;
+        font-size: 3.15vw;
+    }
+    }
+}
+ol {
+    margin: 0 0 3.0rem;
+    padding: 0;
+    counter-reset: my-counter;
+    list-style: none;
+    li {
+        margin: 0 0 1.0rem;
+        padding: 0 0 0 3.0rem;
+        position: relative;
+        &:before {
+            content: counter(my-counter);
+            counter-increment: my-counter;
+            background-color: $colorMain;
+            color: #FFF;
+            display: block;
+            float: left;
+            line-height: 2.0rem;
+            margin-left: -3.0rem;
+            text-align: center;
+            height: 2.0rem;
+            width: 2.0rem;
+            border-radius: 50%;
+        }
+    }
+    @include sp {
+    li {
+        margin: 0 0 2.64vw;
+        font-size: 4.0vw;
+        padding: 0 0 0 6.0vw;
+        &:before {
+            line-height: 6.0vw;
+            margin-left: -6.0vw;
+            text-align: center;
+            height: 6.0vw;
+            width: 6.0vw;
+            border-radius: 50%;
+        }
+    }
+    }
+}

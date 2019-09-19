@@ -1,0 +1,86 @@
+/*
+	btn.scss
+---------------------------------------------------------------------------- */
+%buttonBase {
+    border: none;
+    width: 225px;
+    height: 50px;
+    line-height: 5.0rem;
+    box-sizing: border-box;
+    border: 1px solid $colorMain;
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+    @include trans
+    position: relative;
+}
+.cmn {
+    &Wrapper {
+        margin: 3.9vw 0;
+        text-align: center;
+        letter-spacing: -0.4em;
+        li {
+            display: inline-block;
+            letter-spacing: normal;
+            margin: 0 1.70vw;
+        }
+    }
+    &--button01 {
+        @extend %buttonBase;
+        font-weight: 400;
+        &:link {color: #000; text-decoration: none;}
+        &:visited {color: #000; text-decoration: none;}
+        &:hover {color: #FFF; text-decoration: none; background-color: $colorMain;}
+        &:after {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            content: "";
+            background-color: $colorMain;
+            border-radius: 50%;
+            top: 48.5%;
+            right: -1.25%;
+        }
+    }
+}
+@include sp {
+    %buttonBaseSMP {
+        width: get_vw(660);
+        height: get_vw(90);
+        line-height: get_vw(90);
+        box-sizing: border-box;
+        border: 1px solid $colorMain;
+        display: block;
+        text-align: center;
+        font-size: get_vw(32);
+        @include trans
+        position: relative;
+    }
+    .cmn {
+        &Wrapper {
+            margin: 3.9vw 0;
+            text-align: center;
+            letter-spacing: -0.4em;
+            li {
+                display: inline-block;
+                letter-spacing: normal;
+                margin: 0 1.70vw;
+            }
+        }
+        &--button01 {
+            @extend %buttonBaseSMP;
+            &:after {
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                content: "";
+                background-color: $colorMain;
+                border-radius: 50%;
+                top: 47.5%;
+                right: -1.25%;
+            }
+        }
+    }
+}
+
+
